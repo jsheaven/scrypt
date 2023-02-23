@@ -14,7 +14,7 @@ export const PBKDF2_HMAC_SHA256_OneIteration = async (
   salt: Array<number>,
   derivedKeyLength: number,
 ): Promise<Array<number>> => {
-  const masterKey = await crypto.subtle.importKey('raw', new Uint8Array(password), 'PBKDF2', false, ['deriveBits'])
+  const baseKey = await crypto.subtle.importKey('raw', new Uint8Array(password), 'PBKDF2', false, ['deriveBits'])
   const derivedKey = await crypto.subtle.deriveBits(
     {
       name: 'PBKDF2',
@@ -22,7 +22,7 @@ export const PBKDF2_HMAC_SHA256_OneIteration = async (
       iterations: 1,
       hash: 'SHA-256',
     },
-    masterKey,
+    baseKey,
     derivedKeyLength * 8, // The key length must be specified in bits
   )
   return Array.from(new Uint8Array(derivedKey))
