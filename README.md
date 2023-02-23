@@ -4,7 +4,7 @@
 
 <h2 align="center">User Stories</h2>
 
-1. As a developer, I want to use a modern `scrypt` implementation that is fast and that makes use of the Web Crypto API
+1. As a developer, I want to use a modern `scrypt` implementation that is actively maintained and makes use of the Web Crypto API
 
 <h2 align="center">Features</h2>
 
