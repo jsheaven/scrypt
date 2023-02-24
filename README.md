@@ -74,7 +74,7 @@ const { scrypt } = require('...')
 
 <h2 align="center">Advanced use-cases</h2>
 
-See the [tests] to get an idea about advanced use-cases, such as providing password and salt using `BufferLike` data structures or cancelling the key deviation process while it is processing.
+See the [tests] to get an idea about advanced use-cases, such as providing password and salt using `BufferLike` data structures or cancelling the key derivation process while it is processing.
 
 <h2 align="center">Acknowledgements</h2>
 
